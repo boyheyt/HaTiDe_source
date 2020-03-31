@@ -19,27 +19,30 @@ def display_time():
 
     if mTotalMinutesTime == 60:
         mTotalHourTime += 1
+        mTotalMinutesTime = 0
 
     currentTime = mTotalSecondTime
     mTotalSecondTime += 1
-    message = str(mTotalHourTime) +":"+ str(mTotalMinutesTime) +":"+ str(currentTime)
+    if currentTime < 10:
+        if mTotalMinutesTime < 10:
+            message = str(mTotalHourTime) +":0"+ str(mTotalMinutesTime) +":0"+ str(currentTime)
+        else:
+            message = str(mTotalHourTime) +":"+ str(mTotalMinutesTime) +":0"+ str(currentTime)
+    else:
+        if mTotalMinutesTime < 10:
+            message = str(mTotalHourTime) +":0"+ str(mTotalMinutesTime) +":"+ str(currentTime)
+        else:
+            message = str(mTotalHourTime) +":"+ str(mTotalMinutesTime) +":"+ str(currentTime)
     ClockLable['text'] = message
     top.after(1000,display_time)
 
 if __name__ == '__main__':
 
     top = Functk.Tk("Managerment Job")
-    top.geometry("300x390")
-    top.title("Time Task Countting")
+    top.geometry("370x120")
+    top.title("Time Task Counting")
     #Functk.Label(top, text="Main Name").grid(row=0)
     ClockLable = Functk.Label(top,font='ariel 80',bg="black",fg="red")
     ClockLable.grid(row=0,column=0)
     display_time()
-    #e1 = Functk.Entry(top)
-    #e1.grid(row=0, column=1)
-    #Functk.Button(top, 
-    #      text='Show', command=Set_Button).grid(row=3, 
-    #                                                   column=1, 
-    #                                                   sticky=Functk.W, 
-    #                                                   pady=4)
     top.mainloop()
