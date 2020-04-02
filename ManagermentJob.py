@@ -6,6 +6,7 @@ global mIsTurnCount
 global mTotalSecondTime
 global mTotalMinutesTime
 global mTotalHourTime
+global mListDateExits
 mTotalSecondTime = 0
 mTotalMinutesTime = 0
 mTotalHourTime = 0
@@ -15,9 +16,11 @@ def display_time():
     global mTotalSecondTime
     global mTotalMinutesTime
     global mTotalHourTime
+    global mListDateExits
     if mTotalSecondTime == 60:
         mTotalMinutesTime += 1
         mTotalSecondTime = 0
+        saveCounterFunc(mListDateExits[0],mListDateExits[1])
 
     if mTotalMinutesTime == 60:
         mTotalHourTime += 1
@@ -95,6 +98,7 @@ def checkSameDayCounterFunc():
     return [False,0]
 
 if __name__ == '__main__':
+    mListDateExits = []
     top = Functk.Tk("Managerment Job")
     top.geometry("370x120")
     top.title("Time Task Counting")
@@ -102,7 +106,7 @@ if __name__ == '__main__':
     ClockLable = Functk.Label(top,font='ariel 80',bg="black",fg="red")
     ClockLable.grid(row=0,column=0)
     #check time have saved or not
-    listDayExit = checkSameDayCounterFunc()
+    mListDateExits = checkSameDayCounterFunc()
     display_time()
     top.mainloop()
     #save time
