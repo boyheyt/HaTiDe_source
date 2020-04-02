@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import tkinter as Functk
 import datetime as FuncTime
+import matplotlib.pyplot as plt
 
 global mIsTurnCount
 global mTotalSecondTime
@@ -97,6 +98,41 @@ def checkSameDayCounterFunc():
             countLine += 1
     return [False,0]
 
+# Func convert to hour time
+def ConvertToHourFunc(time):
+    listHMS = time.split("-")
+    fTotalTime = int(listHMS[0]) + float(listHMS[1])/60 + float(listHMS[0])/3600
+    return fTotalTime
+
+def PlotData():
+    # Get file system
+    infile  = open("system.txt","r")
+    contentTimeFile = infile.readlines()
+    infile.closed
+    listDate = []
+    listMeasureHour = []
+    for index in contentTimeFile:
+        #extract the date
+        wordlist = index.split(":")
+        listDate.append(wordlist[0])
+        listMeasureHour.append(ConvertToHourFunc(wordlist[1]))
+    print(listDate)
+    print(listMeasureHour)
+    # Create figure and plot space
+    fig, ax = plt.subplots(figsize=(15, 15))
+    # Add x-axis and y-axis
+    ax.bar(listDate,
+        listMeasureHour,
+        color='purple')
+    # Set title and labels for axes
+    ax.set(xlabel="Date (YYYY,MM,dd)",
+       ylabel="Time (Hour)",
+       title="Measure time working\n")
+    # Rotate tick marks on x-axis
+    plt.setp(ax.get_xticklabels(), rotation=45)
+    plt.show()
+
+#Main func
 if __name__ == '__main__':
     mListDateExits = []
     top = Functk.Tk("Managerment Job")
@@ -105,9 +141,11 @@ if __name__ == '__main__':
     #Functk.Label(top, text="Main Name").grid(row=0)
     ClockLable = Functk.Label(top,font='ariel 80',bg="black",fg="red")
     ClockLable.grid(row=0,column=0)
-    #check time have saved or not
+    # Create Button
+    # Check time have saved or not
     mListDateExits = checkSameDayCounterFunc()
     display_time()
     top.mainloop()
     #save time
-    saveCounterFunc(listDayExit[0],listDayExit[1])
+    saveCounterFunc(mListDateExits[0],mListDateExits[1])
+    PlotData()
