@@ -8,21 +8,29 @@ global mTotalSecondTime
 global mTotalMinutesTime
 global mTotalHourTime
 global mListDateExits
+global isGuardFirstTimeWrite
 mTotalSecondTime = 0
 mTotalMinutesTime = 0
 mTotalHourTime = 0
-
+isGuardFirstTimeWrite = False
 #display_time
 def display_time():
     global mTotalSecondTime
     global mTotalMinutesTime
     global mTotalHourTime
     global mListDateExits
+    global isGuardFirstTimeWrite
     if mTotalSecondTime == 60:
         mTotalMinutesTime += 1
         mTotalSecondTime = 0
-        saveCounterFunc(mListDateExits[0],mListDateExits[1])
-
+        if mListDateExits[0] == False:
+            if isGuardFirstTimeWrite == False:
+                saveCounterFunc(False,mListDateExits[1])
+                isGuardFirstTimeWrite = True
+            else :
+                saveCounterFunc(True,mListDateExits[1])
+        else: # True
+            saveCounterFunc(mListDateExits[0],mListDateExits[1])
     if mTotalMinutesTime == 60:
         mTotalHourTime += 1
         mTotalMinutesTime = 0
@@ -116,8 +124,8 @@ def PlotData():
         wordlist = index.split(":")
         listDate.append(wordlist[0])
         listMeasureHour.append(ConvertToHourFunc(wordlist[1]))
-    print(listDate)
-    print(listMeasureHour)
+    #print(listDate)
+    #print(listMeasureHour)
     # Create figure and plot space
     fig, ax = plt.subplots(figsize=(15, 15))
     # Add x-axis and y-axis
@@ -147,5 +155,8 @@ if __name__ == '__main__':
     display_time()
     top.mainloop()
     #save time
-    saveCounterFunc(mListDateExits[0],mListDateExits[1])
+    if isGuardFirstTimeWrite == True:
+        saveCounterFunc(True,mListDateExits[1])
+    else:
+        saveCounterFunc(mListDateExits[0],mListDateExits[1])
     PlotData()
