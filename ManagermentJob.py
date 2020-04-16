@@ -73,7 +73,8 @@ def saveCounterFunc(isExit,lineExit):
         infile  = open("system.txt","r")
         listDataOfFile = infile.readlines()
         infile.closed
-        listDataOfFile[lineExit] = message
+        mListDateExits = checkSameDayCounterFunc()
+        listDataOfFile[mListDateExits[1]] = message
         outFile  = open("system.txt","w+")
         outFile.writelines(listDataOfFile)
         outFile.closed
