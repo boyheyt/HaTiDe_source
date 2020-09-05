@@ -1,0 +1,36 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 700 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 700 -y 80 -defaultsOSRD
+preplace port rs -pg 1 -lvl 3 -x 700 -y 400 -defaultsOSRD
+preplace port e -pg 1 -lvl 3 -x 700 -y 420 -defaultsOSRD
+preplace port Push_button -pg 1 -lvl 3 -x 700 -y 340 -defaultsOSRD -right
+preplace portBus d -pg 1 -lvl 3 -x 700 -y 440 -defaultsOSRD
+preplace portBus ColDataOut -pg 1 -lvl 3 -x 700 -y 300 -defaultsOSRD
+preplace portBus RowDataIn -pg 1 -lvl 0 -x -40 -y 70 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 520 -y 90 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 1 -x 180 -y 490 -defaultsOSRD
+preplace inst top_0 -pg 1 -lvl 2 -x 520 -y 430 -defaultsOSRD
+preplace inst KeyPadInterpreter_0_upgraded_ipi -pg 1 -lvl 1 -x 180 -y 290 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 380 360 310 670
+preplace netloc top_0_rs 1 2 1 NJ 400
+preplace netloc top_0_e 1 2 1 NJ 420
+preplace netloc top_0_d 1 0 3 20 630 370 340 660J
+preplace netloc top_0_done 1 0 3 -10 640 N 640 660
+preplace netloc Push_button_1 1 0 3 0 620 350 330 670J
+preplace netloc KeyPadInterpreter_0_upgraded_ipi_KeyReady 1 0 2 10 610 340
+preplace netloc KeyPadInterpreter_0_upgraded_ipi_DataOut 1 0 2 30 600 330
+preplace netloc KeyPadInterpreter_0_upgraded_ipi_ColDataOut 1 1 2 NJ 300 NJ
+preplace netloc RowDataIn_1 1 0 1 -20 70n
+preplace netloc processing_system7_0_FIXED_IO 1 2 1 670J 80n
+preplace netloc processing_system7_0_DDR 1 2 1 670J 60n
+levelinfo -pg 1 -40 180 520 700
+pagesize -pg 1 -db -bbox -sgen -190 -60 860 1400
+"
+}
+{
+   "da_clkrst_cnt":"3",
+   "da_ps7_cnt":"1"
+}
