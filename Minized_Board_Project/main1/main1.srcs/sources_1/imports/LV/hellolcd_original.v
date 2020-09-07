@@ -12,10 +12,14 @@ module top(
   d,
   data_in,
   enable_in,
-  done_out
+  done_out,
+  // testing
+  debug_counteraddres,
+  debug_data_rom_out,
+  debug_addr_rom_in
 );
 parameter CLK_FREQ = 100000000;
-parameter integer Ready_5ms   = 0.005000000 * CLK_FREQ;
+parameter integer Ready_4ms   = 0.004000000 * CLK_FREQ;
 
 input clock_100;
 input push_button;
@@ -25,6 +29,11 @@ output rs;
 output e;
 output [7:0] d;
 output done_out;
+// for debug
+output [5:0] debug_counteraddres;
+output [8:0] debug_data_rom_out;
+output [5:0] debug_addr_rom_in;
+
 
 reg [23:0] count_neg_ready = 24'h000000;
 reg internal_reset = 1'b0;
@@ -34,9 +43,13 @@ wire clean_signal;
 wire data_ready;
 wire lcd_busy;
 wire [8:0] d_in;
-wire [3:0] rom_in;
+wire [5:0] rom_in;
 wire valid_rom_out;
 wire [5:0] addr_rom_out;
+// debug
+assign debug_counteraddres = addr_rom_out;
+assign debug_addr_rom_in = rom_in;
+assign debug_data_rom_out = d_in;
 lcd lcd(
   .clock(clock_100),
   .internal_reset(internal_reset),
@@ -55,7 +68,8 @@ rom rom(
 .isEnable_in(enable_in),
 .valid_out(valid_rom_out),
 .reset_in(internal_reset),
-.counterAddres(addr_rom_out)
+.counterAddres(addr_rom_out),
+.clock(clock_100)
 );
 
 controller controller (
@@ -79,25 +93,37 @@ always @ (posedge clock_100) begin
     last_signal <= clean_signal;
     if (clean_signal == 1'b0) begin
       internal_reset <= 1'b1;
+      done_out <= 1'b0;
+      count_neg_ready <= 24'h000000;
     end
   end
   else begin
     internal_reset <= 1'b0;
   end
-  // Handle done_out
+  // Handle done_out . Done_out = 1; ready -> 0
   if (enable_in) begin
-    if (count_neg_ready == Ready_5ms) begin
-        done_out = 0;
-        //count_neg_ready = 24'b0;
-    end
-    else begin
-        count_neg_ready = count_neg_ready + 1;
-        done_out = 1;
-    end
+      if (done_out == 0) begin
+            if (count_neg_ready == Ready_4ms) begin
+                done_out <= 1;
+                count_neg_ready <= 24'b0;
+            end 
+            else begin
+                count_neg_ready <= count_neg_ready + 1; 
+            end
+      end else 
+        done_out <= 0;
   end
-  else begin
-    count_neg_ready = 24'b0;
-  end  
+    else begin
+        if (done_out) begin
+            if (count_neg_ready == Ready_4ms) begin
+                done_out <= 0;
+                count_neg_ready <= 24'b0;
+            end 
+            else begin
+                count_neg_ready <= count_neg_ready + 1; 
+            end
+        end
+    end
 end
 
 
@@ -535,11 +561,13 @@ always @ (posedge clock) begin
   end
 
   // stops the demo after one run through the ROM
-  if (rom_address == counterAddr) begin    
+  if (rom_address[5:0] >= counterAddr[5:0]) begin    
     halt <= 1'b1;
     data_ready <= 1'b0;
     //rom_address <= 6'b0000;
     //test_trig <= 1;
+  end else begin
+    halt <= 1'b0;  
   end
 
   // prevent the system from sending 
@@ -561,8 +589,10 @@ always @ (posedge clock) begin
         data_ready <= 1'b1;
       end
       else if (lcd_busy == 1'b1) begin
-        rom_address <= rom_address + 6'b0001;
-        data_ready <= 1'b0;
+        if (rom_address[5:0] < counterAddr[5:0]) begin
+            rom_address <= rom_address + 6'b0001;
+            data_ready <= 1'b0;
+        end
       end
     end
   end
@@ -619,13 +649,15 @@ data_in,
 isEnable_in,
 valid_out,
 reset_in,
-counterAddres
+counterAddres,
+clock
 );
 // Port declare
 input [5:0] rom_in; // address 3:0 -> 5:0
 input [8:0] data_in;
 input isEnable_in;
 input reset_in;
+input clock;
 output reg [8:0] rom_out = 9'b0; 
 output wire [5:0] counterAddres;
 output valid_out;
@@ -638,7 +670,7 @@ reg valid_out = 1'b0;
 integer index;
 // Slelect output
 always @ (rom_in) begin
-    if(rom_in >= 6'h28) begin 
+    if(rom_in[5:0] >= 6'h28) begin 
         rom_out = romBuffer[0]; // assign output
     end
     else begin
@@ -646,7 +678,7 @@ always @ (rom_in) begin
     end
 end
 // Capture input
-always @ (posedge isEnable_in or  posedge reset_in) begin
+always @ (posedge isEnable_in or posedge reset_in) begin
     if (reset_in) begin
         valid_out <= 1'b0;
         counterAddrReg[5:0] <= 6'h0;
@@ -656,12 +688,17 @@ always @ (posedge isEnable_in or  posedge reset_in) begin
           romBuffer[0] <= 0;
     end 
     else begin
-        if (counterAddrReg[5:0] == 6'h28) begin 
-            counterAddrReg[5:0] = 6'h0;
+        if (isEnable_in) begin
+            if (counterAddrReg[5:0] >= 6'h28) begin 
+                counterAddrReg[5:0] <= 6'h0;
+                romBuffer[0] <= data_in[8:0];
+            end 
+            else  begin
+                romBuffer[counterAddrReg[5:0]] = data_in[8:0];
+                counterAddrReg = counterAddrReg + 6'b1;
+                valid_out = 1'b1;
+            end
         end
-        romBuffer[counterAddrReg[5:0]] = data_in[8:0];
-        counterAddrReg = counterAddrReg + 6'b1;
-        valid_out = 1'b1;
     end
 end
 // assign output to controller

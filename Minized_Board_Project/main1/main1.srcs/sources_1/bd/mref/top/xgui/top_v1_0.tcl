@@ -4,7 +4,7 @@ proc init_gui { IPINST } {
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "CLK_FREQ" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "Ready_5ms" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "Ready_4ms" -parent ${Page_0}
 
 
 }
@@ -18,12 +18,12 @@ proc validate_PARAM_VALUE.CLK_FREQ { PARAM_VALUE.CLK_FREQ } {
 	return true
 }
 
-proc update_PARAM_VALUE.Ready_5ms { PARAM_VALUE.Ready_5ms } {
-	# Procedure called to update Ready_5ms when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.Ready_4ms { PARAM_VALUE.Ready_4ms } {
+	# Procedure called to update Ready_4ms when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.Ready_5ms { PARAM_VALUE.Ready_5ms } {
-	# Procedure called to validate Ready_5ms
+proc validate_PARAM_VALUE.Ready_4ms { PARAM_VALUE.Ready_4ms } {
+	# Procedure called to validate Ready_4ms
 	return true
 }
 
@@ -33,8 +33,8 @@ proc update_MODELPARAM_VALUE.CLK_FREQ { MODELPARAM_VALUE.CLK_FREQ PARAM_VALUE.CL
 	set_property value [get_property value ${PARAM_VALUE.CLK_FREQ}] ${MODELPARAM_VALUE.CLK_FREQ}
 }
 
-proc update_MODELPARAM_VALUE.Ready_5ms { MODELPARAM_VALUE.Ready_5ms PARAM_VALUE.Ready_5ms } {
+proc update_MODELPARAM_VALUE.Ready_4ms { MODELPARAM_VALUE.Ready_4ms PARAM_VALUE.Ready_4ms } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.Ready_5ms}] ${MODELPARAM_VALUE.Ready_5ms}
+	set_property value [get_property value ${PARAM_VALUE.Ready_4ms}] ${MODELPARAM_VALUE.Ready_4ms}
 }
 

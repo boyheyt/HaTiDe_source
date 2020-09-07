@@ -31,21 +31,21 @@ input KeyRd
 // to continue scanning.
 
 parameter Scan=2'b00, Calculate=2'b01, Analyize=2'b10, WaitForRead=2'b11;
-reg [1:0] State = Scan;
-reg [2:0] Counter = 0;
-reg [15:0] Data = 16'hFFFF;
-reg [3:0] Col = 4'b0111;
-reg [3:0] Sum = 0;
-reg ZeroChecker = 0;
-reg waitbit = 0;
+reg [1:0] State;
+reg [2:0] Counter;
+reg [15:0] Data;
+reg [3:0] Col;
+reg [3:0] Sum;
+reg ZeroChecker;
+reg waitbit;
 
 assign ColOut[0] = Col[0] ? 1'bz : 1'b0; 
 assign ColOut[1] = Col[1] ? 1'bz : 1'b0; 
 assign ColOut[2] = Col[2] ? 1'bz : 1'b0; 
 assign ColOut[3] = Col[3] ? 1'bz : 1'b0; 
   
-always @(posedge Clock, posedge Reset) begin
-	if (Reset == 1) begin
+always @(posedge Clock, negedge Reset) begin
+	if (Reset == 0) begin
 		State <= Scan;
 		Col <= 4'b0111;
 		LFSRReset <= 0;
@@ -63,37 +63,37 @@ always @(posedge Clock, posedge Reset) begin
 				if(LFSRFlg == 1) begin
 					case(Col)
 						4'b0111: begin 
-							//if(waitbit == 1) begin
+							if(waitbit == 1) begin
 								Data[15:12] <= RowIn;
 								Col <= 4'b1011;
 								waitbit <= 0;
-							//end
-							//else waitbit <= 1;
+							end
+							else waitbit <= 1;
 						end
 						4'b1011: begin
-							//if(waitbit == 1) begin
+							if(waitbit == 1) begin
 								Data[11:8] <= RowIn;
 								Col <= 4'b1101;
 								waitbit <= 0;
-							//end
-							//else waitbit <= 1;
+							end
+							else waitbit <= 1;
 						end
 						4'b1101: begin
-							//if(waitbit == 1) begin
+							if(waitbit == 1) begin
 								Data[7:4] <= RowIn;
 								Col <= 4'b1110;
 								waitbit <= 0;
-							//end
-							//else waitbit <= 1;
+							end
+							else waitbit <= 1;
 						end
 						4'b1110: begin
-							//if(waitbit == 1) begin
+							if(waitbit == 1) begin
 								Data[3:0] <= RowIn;
 								Col <= 4'b0111;
 								State <= Calculate;	
 								waitbit <= 0;
-							//end
-							//else waitbit <= 1;
+							end
+							else waitbit <= 1;
 						end
 						default: begin
 							Col <= 4'b1110;

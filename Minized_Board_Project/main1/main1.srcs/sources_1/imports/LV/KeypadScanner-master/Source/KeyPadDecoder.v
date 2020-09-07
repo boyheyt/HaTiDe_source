@@ -25,8 +25,8 @@ output reg [8:0] Out
 // * 0 # D				
    
 always @(In) begin
-	case (In)
-		4'b0000: Out = 9'b100110001;
+    case (In)
+		4'b0000: Out = 9'b101001000;//9'b100110001;
 		4'b0001: Out = 9'b100110010;
 		4'b0010: Out = 9'b100110011;
 		4'b0011: Out = 9'b100101011;
@@ -43,7 +43,7 @@ always @(In) begin
 		4'b1110: Out = 9'b100111101;
 		4'b1111: Out = 9'b111111101;
      default: Out = 9'b000000000;
-	endcase
+     endcase
 end
 
 endmodule

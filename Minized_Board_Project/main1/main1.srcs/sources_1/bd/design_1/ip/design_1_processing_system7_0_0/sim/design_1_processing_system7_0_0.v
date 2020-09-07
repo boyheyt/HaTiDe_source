@@ -57,6 +57,7 @@
 
 module design_1_processing_system7_0_0 (
 FCLK_CLK0, 
+FCLK_CLK1, 
 MIO, 
 DDR_CAS_n, 
 DDR_CKE, 
@@ -80,6 +81,7 @@ PS_CLK,
 PS_PORB 
 );
 output FCLK_CLK0;
+output FCLK_CLK1;
 input [31 : 0] MIO;
 input DDR_CAS_n;
 input DDR_CKE;
@@ -481,7 +483,7 @@ input PS_PORB;
     .S_AXI_HP3_WSTRB(8'B0),
     .FCLK_CLK0(FCLK_CLK0),
 	
-    .FCLK_CLK1(),
+    .FCLK_CLK1(FCLK_CLK1),
 	
     .FCLK_CLK2(),
 	

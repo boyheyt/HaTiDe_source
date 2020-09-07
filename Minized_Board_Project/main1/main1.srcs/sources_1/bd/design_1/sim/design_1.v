@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sat Sep  5 09:57:18 2020
+//Date        : Tue Sep  8 00:59:52 2020
 //Host        : DESKTOP-O25IKCM running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -94,7 +94,10 @@ module design_1
   wire processing_system7_0_FIXED_IO_PS_PORB;
   wire processing_system7_0_FIXED_IO_PS_SRSTB;
   wire [7:0]top_0_d;
-  wire top_0_done;
+  wire [5:0]top_0_debug_addr_rom_in;
+  wire [5:0]top_0_debug_address;
+  wire [8:0]top_0_debug_data_rom_out;
+  wire top_0_done_out;
   wire top_0_e;
   wire top_0_rs;
 
@@ -108,7 +111,7 @@ module design_1
        (.Clock(processing_system7_0_FCLK_CLK0),
         .ColDataOut(KeyPadInterpreter_0_upgraded_ipi_ColDataOut),
         .DataOut(KeyPadInterpreter_0_upgraded_ipi_DataOut),
-        .KeyRead(top_0_done),
+        .KeyRead(top_0_done_out),
         .KeyReady(KeyPadInterpreter_0_upgraded_ipi_KeyReady),
         .ResetButton(Push_button_1),
         .RowDataIn(RowDataIn_1));
@@ -118,7 +121,10 @@ module design_1
         .probe1(RowDataIn_1),
         .probe2(KeyPadInterpreter_0_upgraded_ipi_DataOut),
         .probe3(top_0_d),
-        .probe4(top_0_done));
+        .probe4(top_0_done_out),
+        .probe5(top_0_debug_address),
+        .probe6(top_0_debug_data_rom_out),
+        .probe7(top_0_debug_addr_rom_in));
   design_1_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -146,7 +152,10 @@ module design_1
        (.clock_100(processing_system7_0_FCLK_CLK0),
         .d(top_0_d),
         .data_in(KeyPadInterpreter_0_upgraded_ipi_DataOut),
-        .done_out(top_0_done),
+        .debug_addr_rom_in(top_0_debug_addr_rom_in),
+        .debug_counteraddres(top_0_debug_address),
+        .debug_data_rom_out(top_0_debug_data_rom_out),
+        .done_out(top_0_done_out),
         .e(top_0_e),
         .enable_in(KeyPadInterpreter_0_upgraded_ipi_KeyReady),
         .push_button(Push_button_1),

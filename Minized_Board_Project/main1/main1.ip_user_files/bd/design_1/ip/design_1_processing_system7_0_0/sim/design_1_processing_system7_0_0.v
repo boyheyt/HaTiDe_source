@@ -57,7 +57,7 @@
 
 module design_1_processing_system7_0_0 (
 FCLK_CLK0, 
-FCLK_RESET0_N, 
+FCLK_CLK1, 
 MIO, 
 DDR_CAS_n, 
 DDR_CKE, 
@@ -81,7 +81,7 @@ PS_CLK,
 PS_PORB 
 );
 output FCLK_CLK0;
-output FCLK_RESET0_N;
+output FCLK_CLK1;
 input [31 : 0] MIO;
 input DDR_CAS_n;
 input DDR_CKE;
@@ -104,7 +104,7 @@ input PS_SRSTB;
 input PS_CLK;
 input PS_PORB;
 
-  processing_system7_vip_v1_0_4 #(
+  processing_system7_vip_v1_0_7 #(
     .C_USE_M_AXI_GP0(0),
     .C_USE_M_AXI_GP1(0),
     .C_USE_S_AXI_ACP(0),
@@ -483,12 +483,12 @@ input PS_PORB;
     .S_AXI_HP3_WSTRB(8'B0),
     .FCLK_CLK0(FCLK_CLK0),
 	
-    .FCLK_CLK1(),
+    .FCLK_CLK1(FCLK_CLK1),
 	
     .FCLK_CLK2(),
 	
     .FCLK_CLK3(),
-    .FCLK_RESET0_N(FCLK_RESET0_N),
+    .FCLK_RESET0_N(),
     .FCLK_RESET1_N(),
     .FCLK_RESET2_N(),
     .FCLK_RESET3_N(),

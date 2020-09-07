@@ -196,7 +196,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_EN_STRG_QUAL {0} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {5} \
+   CONFIG.C_NUM_OF_PROBES {8} \
    CONFIG.C_PROBE0_MU_CNT {1} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE1_MU_CNT {4} \
@@ -207,6 +207,12 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE3_WIDTH {8} \
    CONFIG.C_PROBE4_MU_CNT {1} \
    CONFIG.C_PROBE4_TYPE {0} \
+   CONFIG.C_PROBE5_MU_CNT {6} \
+   CONFIG.C_PROBE5_WIDTH {6} \
+   CONFIG.C_PROBE6_MU_CNT {9} \
+   CONFIG.C_PROBE6_WIDTH {9} \
+   CONFIG.C_PROBE7_MU_CNT {6} \
+   CONFIG.C_PROBE7_WIDTH {6} \
    CONFIG.C_TRIGIN_EN {false} \
    CONFIG.C_TRIGOUT_EN {false} \
  ] $ila_0
@@ -296,7 +302,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ENET_RESET_ENABLE {0} \
    CONFIG.PCW_ENET_RESET_POLARITY {Active Low} \
    CONFIG.PCW_EN_4K_TIMER {0} \
-   CONFIG.PCW_EN_CLK1_PORT {0} \
+   CONFIG.PCW_EN_CLK1_PORT {1} \
    CONFIG.PCW_EN_CLK2_PORT {0} \
    CONFIG.PCW_EN_EMIO_CD_SDIO0 {0} \
    CONFIG.PCW_EN_EMIO_CD_SDIO1 {0} \
@@ -322,8 +328,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {4} \
    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} \
    CONFIG.PCW_FCLK1_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} \
-   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} \
+   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {16} \
+   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {10} \
    CONFIG.PCW_FCLK2_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} \
@@ -331,15 +337,15 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK_CLK0_BUF {TRUE} \
-   CONFIG.PCW_FCLK_CLK1_BUF {FALSE} \
+   CONFIG.PCW_FCLK_CLK1_BUF {TRUE} \
    CONFIG.PCW_FCLK_CLK2_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
    CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} \
-   CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {100} \
+   CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {10} \
    CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
-   CONFIG.PCW_FPGA_FCLK1_ENABLE {0} \
+   CONFIG.PCW_FPGA_FCLK1_ENABLE {1} \
    CONFIG.PCW_FPGA_FCLK2_ENABLE {0} \
    CONFIG.PCW_FPGA_FCLK3_ENABLE {0} \
    CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {0} \
@@ -758,7 +764,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net RowDataIn_1 [get_bd_ports RowDataIn] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/RowDataIn] [get_bd_pins ila_0/probe1]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/Clock] [get_bd_pins ila_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins top_0/clock_100]
   connect_bd_net -net top_0_d [get_bd_ports d] [get_bd_pins ila_0/probe3] [get_bd_pins top_0/d]
-  connect_bd_net -net top_0_done [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/KeyRead] [get_bd_pins ila_0/probe4] [get_bd_pins top_0/done_out]
+  connect_bd_net -net top_0_debug_addr_rom_in [get_bd_pins ila_0/probe7] [get_bd_pins top_0/debug_addr_rom_in]
+  connect_bd_net -net top_0_debug_address [get_bd_pins ila_0/probe5] [get_bd_pins top_0/debug_counteraddres]
+  connect_bd_net -net top_0_debug_data_rom_out [get_bd_pins ila_0/probe6] [get_bd_pins top_0/debug_data_rom_out]
+  connect_bd_net -net top_0_done_out [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/KeyRead] [get_bd_pins ila_0/probe4] [get_bd_pins top_0/done_out]
   connect_bd_net -net top_0_e [get_bd_ports e] [get_bd_pins top_0/e]
   connect_bd_net -net top_0_rs [get_bd_ports rs] [get_bd_pins top_0/rs]
 

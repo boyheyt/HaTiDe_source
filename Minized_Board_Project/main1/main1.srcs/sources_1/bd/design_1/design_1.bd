@@ -11,8 +11,8 @@
     "design_tree": {
       "processing_system7_0": "",
       "ila_0": "",
-      "top_0": "",
-      "KeyPadInterpreter_0_upgraded_ipi": ""
+      "KeyPadInterpreter_0_upgraded_ipi": "",
+      "top_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -262,7 +262,7 @@
             "value": "0"
           },
           "PCW_EN_CLK1_PORT": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_CLK2_PORT": {
             "value": "0"
@@ -342,11 +342,14 @@
           "PCW_FCLK_CLK0_BUF": {
             "value": "TRUE"
           },
+          "PCW_FCLK_CLK1_BUF": {
+            "value": "TRUE"
+          },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
             "value": "100"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "100"
+            "value": "10"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -355,6 +358,9 @@
             "value": "50"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
+            "value": "1"
+          },
+          "PCW_FPGA_FCLK1_ENABLE": {
             "value": "1"
           },
           "PCW_GPIO_EMIO_GPIO_ENABLE": {
@@ -865,7 +871,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "5"
+            "value": "8"
           },
           "C_PROBE0_MU_CNT": {
             "value": "1"
@@ -897,61 +903,29 @@
           "C_PROBE4_TYPE": {
             "value": "0"
           },
+          "C_PROBE5_MU_CNT": {
+            "value": "6"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "6"
+          },
+          "C_PROBE6_MU_CNT": {
+            "value": "9"
+          },
+          "C_PROBE6_WIDTH": {
+            "value": "9"
+          },
+          "C_PROBE7_MU_CNT": {
+            "value": "6"
+          },
+          "C_PROBE7_WIDTH": {
+            "value": "6"
+          },
           "C_TRIGIN_EN": {
             "value": "false"
           },
           "C_TRIGOUT_EN": {
             "value": "false"
-          }
-        }
-      },
-      "top_0": {
-        "vlnv": "xilinx.com:module_ref:top:1.0",
-        "xci_name": "design_1_top_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "top",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clock_100": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "push_button": {
-            "direction": "I"
-          },
-          "rs": {
-            "direction": "O"
-          },
-          "e": {
-            "direction": "O"
-          },
-          "d": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "data_in": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "enable_in": {
-            "direction": "I"
-          },
-          "done_out": {
-            "direction": "O"
           }
         }
       },
@@ -973,7 +947,7 @@
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               }
             }
@@ -1008,6 +982,71 @@
             "right": "0"
           }
         }
+      },
+      "top_0": {
+        "vlnv": "xilinx.com:module_ref:top:1.0",
+        "xci_name": "design_1_top_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock_100": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "1e+08",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "push_button": {
+            "direction": "I"
+          },
+          "rs": {
+            "direction": "O"
+          },
+          "e": {
+            "direction": "O"
+          },
+          "d": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "enable_in": {
+            "direction": "I"
+          },
+          "done_out": {
+            "direction": "O"
+          },
+          "debug_counteraddres": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "debug_data_rom_out": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "debug_addr_rom_in": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1025,14 +1064,6 @@
       }
     },
     "nets": {
-      "processing_system7_0_FCLK_CLK0": {
-        "ports": [
-          "processing_system7_0/FCLK_CLK0",
-          "ila_0/clk",
-          "top_0/clock_100",
-          "KeyPadInterpreter_0_upgraded_ipi/Clock"
-        ]
-      },
       "top_0_rs": {
         "ports": [
           "top_0/rs",
@@ -1052,18 +1083,11 @@
           "ila_0/probe3"
         ]
       },
-      "top_0_done": {
-        "ports": [
-          "top_0/done_out",
-          "KeyPadInterpreter_0_upgraded_ipi/KeyRead",
-          "ila_0/probe4"
-        ]
-      },
       "Push_button_1": {
         "ports": [
           "Push_button",
-          "top_0/push_button",
-          "KeyPadInterpreter_0_upgraded_ipi/ResetButton"
+          "KeyPadInterpreter_0_upgraded_ipi/ResetButton",
+          "top_0/push_button"
         ]
       },
       "KeyPadInterpreter_0_upgraded_ipi_KeyReady": {
@@ -1076,8 +1100,8 @@
       "KeyPadInterpreter_0_upgraded_ipi_DataOut": {
         "ports": [
           "KeyPadInterpreter_0_upgraded_ipi/DataOut",
-          "top_0/data_in",
-          "ila_0/probe2"
+          "ila_0/probe2",
+          "top_0/data_in"
         ]
       },
       "KeyPadInterpreter_0_upgraded_ipi_ColDataOut": {
@@ -1091,6 +1115,39 @@
           "RowDataIn",
           "ila_0/probe1",
           "KeyPadInterpreter_0_upgraded_ipi/RowDataIn"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "ila_0/clk",
+          "KeyPadInterpreter_0_upgraded_ipi/Clock",
+          "top_0/clock_100"
+        ]
+      },
+      "top_0_debug_address": {
+        "ports": [
+          "top_0/debug_counteraddres",
+          "ila_0/probe5"
+        ]
+      },
+      "top_0_done_out": {
+        "ports": [
+          "top_0/done_out",
+          "ila_0/probe4",
+          "KeyPadInterpreter_0_upgraded_ipi/KeyRead"
+        ]
+      },
+      "top_0_debug_addr_rom_in": {
+        "ports": [
+          "top_0/debug_addr_rom_in",
+          "ila_0/probe7"
+        ]
+      },
+      "top_0_debug_data_rom_out": {
+        "ports": [
+          "top_0/debug_data_rom_out",
+          "ila_0/probe6"
         ]
       }
     }

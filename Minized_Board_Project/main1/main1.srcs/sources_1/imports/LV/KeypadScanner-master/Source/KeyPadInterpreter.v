@@ -49,10 +49,10 @@ output [3:0] PressCount
 wire [3:0] KeyCode;
 wire LFSRRst;
 wire LFSRFlg;
-
+wire mNotReset = ~ResetButton;
 LFSR25000			LFSR     (Clock, LFSRRst, LFSRFlg);
-KeyPadScanner       Scanner  (ResetButton, Clock, RowDataIn, ColDataOut, LFSRRst, LFSRFlg, KeyCode, KeyReady, KeyRead);
-PulseCounter		Count	 (ResetButton, Clock, KeyReady, PressCount);
+KeyPadScanner       Scanner  (mNotReset, Clock, RowDataIn, ColDataOut, LFSRRst, LFSRFlg, KeyCode, KeyReady, KeyRead);
+PulseCounter		Count	 (mNotReset, Clock, KeyReady, PressCount);
 KeyPadDecoder       Decoder  (KeyCode , DataOut);
 
 

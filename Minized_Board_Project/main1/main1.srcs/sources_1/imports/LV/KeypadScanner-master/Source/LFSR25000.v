@@ -22,8 +22,8 @@ output reg Out
 
 reg [14:0] LFSR;
 
-always @(posedge Clock, posedge Reset) begin
-	if(Reset==1) begin
+always @(posedge Clock, negedge Reset) begin
+	if(Reset==0) begin
 		Out <= 0;
 		LFSR <= 15'b111111111111111;
 	end

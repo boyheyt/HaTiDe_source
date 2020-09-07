@@ -52,6 +52,7 @@
 
 `timescale 1ns/1ps
 
+(* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_0 (
   clock_100,
@@ -61,10 +62,12 @@ module design_1_top_0_0 (
   d,
   data_in,
   enable_in,
-  done
+  done_out,
+  debug_address,
+  debug_rom_out
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock_100, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock_100, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clock_100 CLK" *)
 input wire clock_100;
 input wire push_button;
@@ -73,9 +76,14 @@ output wire e;
 output wire [7 : 0] d;
 input wire [8 : 0] data_in;
 input wire enable_in;
-output wire done;
+output wire done_out;
+output wire [5 : 0] debug_address;
+output wire [8 : 0] debug_rom_out;
 
-  top inst (
+  top #(
+    .CLK_FREQ(100000000),
+    .Ready_4ms(400000)
+  ) inst (
     .clock_100(clock_100),
     .push_button(push_button),
     .rs(rs),
@@ -83,6 +91,8 @@ output wire done;
     .d(d),
     .data_in(data_in),
     .enable_in(enable_in),
-    .done(done)
+    .done_out(done_out),
+    .debug_address(debug_address),
+    .debug_rom_out(debug_rom_out)
   );
 endmodule

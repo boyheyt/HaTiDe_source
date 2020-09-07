@@ -26,8 +26,8 @@ reg toggle;
 // that input has been pulsed.
 // It has an active low reset.
   
-always @(posedge Clock, posedge Reset) begin
-	if ( Reset == 1 ) 
+always @(posedge Clock, negedge Reset) begin
+	if ( Reset == 0 ) 
 		Counter <= 4'b0000;
 	else begin
 		if ((In==1) & (toggle==0)) begin

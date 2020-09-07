@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CLK_FREQ=100000000,Ready_5ms=500000}" *)
+(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CLK_FREQ=100000000,Ready_4ms=400000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_0 (
@@ -63,10 +63,13 @@ module design_1_top_0_0 (
   d,
   data_in,
   enable_in,
-  done_out
+  done_out,
+  debug_counteraddres,
+  debug_data_rom_out,
+  debug_addr_rom_in
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock_100, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock_100, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clock_100 CLK" *)
 input wire clock_100;
 input wire push_button;
@@ -76,10 +79,13 @@ output wire [7 : 0] d;
 input wire [8 : 0] data_in;
 input wire enable_in;
 output wire done_out;
+output wire [5 : 0] debug_counteraddres;
+output wire [8 : 0] debug_data_rom_out;
+output wire [5 : 0] debug_addr_rom_in;
 
   top #(
     .CLK_FREQ(100000000),
-    .Ready_5ms(500000)
+    .Ready_4ms(400000)
   ) inst (
     .clock_100(clock_100),
     .push_button(push_button),
@@ -88,6 +94,9 @@ output wire done_out;
     .d(d),
     .data_in(data_in),
     .enable_in(enable_in),
-    .done_out(done_out)
+    .done_out(done_out),
+    .debug_counteraddres(debug_counteraddres),
+    .debug_data_rom_out(debug_data_rom_out),
+    .debug_addr_rom_in(debug_addr_rom_in)
   );
 endmodule
