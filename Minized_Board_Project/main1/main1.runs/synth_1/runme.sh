@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1'
+HD_PWD='C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

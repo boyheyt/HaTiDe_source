@@ -74,17 +74,17 @@ set rc [catch {
   set_property board_part em.avnet.com:minized:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir E:/MiniZed/Lcd_Key_Testing/main1/main1.cache/wt [current_project]
-  set_property parent.project_path E:/MiniZed/Lcd_Key_Testing/main1/main1.xpr [current_project]
-  set_property ip_output_repo E:/MiniZed/Lcd_Key_Testing/main1/main1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.cache/wt [current_project]
+  set_property parent.project_path C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.xpr [current_project]
+  set_property ip_output_repo C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/constrs_1/imports/new/LCD.xdc
+  read_xdc C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/constrs_1/imports/new/LCD.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z007sclg225-1
   set_param project.isImplRun false
@@ -168,12 +168,12 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set src_rc [catch { 
-    puts "source E:/MiniZed/Lcd_Key_Testing/main1/init.tcl"
-    source E:/MiniZed/Lcd_Key_Testing/main1/init.tcl
+    puts "source C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/init.tcl"
+    source C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/init.tcl
   } _RESULT] 
   if {$src_rc} { 
     send_msg_id runtcl-1 error "$_RESULT"
-    send_msg_id runtcl-2 error "sourcing script E:/MiniZed/Lcd_Key_Testing/main1/init.tcl failed"
+    send_msg_id runtcl-2 error "sourcing script C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/init.tcl failed"
     return -code error
   }
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

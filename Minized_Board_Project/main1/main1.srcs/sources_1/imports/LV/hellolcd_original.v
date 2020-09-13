@@ -671,10 +671,10 @@ integer index;
 // Slelect output
 always @ (rom_in) begin
     if(rom_in[5:0] >= 6'h28) begin 
-        rom_out = romBuffer[0]; // assign output
+        rom_out <= romBuffer[0]; // assign output
     end
     else begin
-        rom_out = romBuffer[rom_in]; // assign output
+        rom_out <= data_in; // assign output
     end
 end
 // Capture input
@@ -694,7 +694,7 @@ always @ (posedge isEnable_in or posedge reset_in) begin
                 romBuffer[0] <= data_in[8:0];
             end 
             else  begin
-                romBuffer[counterAddrReg[5:0]] = data_in[8:0];
+                romBuffer[counterAddrReg[5:0]] <= data_in[8:0];
                 counterAddrReg = counterAddrReg + 6'b1;
                 valid_out = 1'b1;
             end

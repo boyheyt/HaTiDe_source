@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Sep  8 00:59:52 2020
+//Date        : Sun Sep 13 18:06:24 2020
 //Host        : DESKTOP-O25IKCM running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -61,7 +61,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   input Push_button;
-  input [3:0]RowDataIn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.ROWDATAIN INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.ROWDATAIN, PortWidth 4, SENSITIVITY EDGE_FALLING" *) input [3:0]RowDataIn;
   output [7:0]d;
   output e;
   output rs;

@@ -678,7 +678,6 @@
 //MODULE DECLARATION
  module design_1_processing_system7_0_0 (
   FCLK_CLK0,
-  FCLK_CLK1,
   MIO,
   DDR_CAS_n,
   DDR_CKE,
@@ -754,7 +753,7 @@
       parameter C_USE_S_AXI_ACP = 0;
       parameter C_PS7_SI_REV = "PRODUCTION";
       parameter C_FCLK_CLK0_BUF = "TRUE";
-      parameter C_FCLK_CLK1_BUF = "TRUE";
+      parameter C_FCLK_CLK1_BUF = "FALSE";
       parameter C_FCLK_CLK2_BUF = "FALSE";
       parameter C_FCLK_CLK3_BUF = "FALSE";
       parameter C_PACKAGE_NAME = "clg225";
@@ -764,7 +763,6 @@
 //INPUT AND OUTPUT PORTS
 
       output  FCLK_CLK0;
-      output  FCLK_CLK1;
       inout  [31 : 0] MIO;
       inout  DDR_CAS_n;
       inout  DDR_CKE;
@@ -790,7 +788,6 @@
 //REG DECLARATIONS
 
       reg FCLK_CLK0;
-      reg FCLK_CLK1;
       string ip_name;
       reg disable_port;
 
@@ -800,7 +797,6 @@ import "DPI-C" function void ps7_set_str_param(input string name,input string va
 import "DPI-C" function void ps7_set_int_param(input string name,input longint val);
 import "DPI-C" function void ps7_init_c_model();
 import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK0();
-import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK1();
    export "DPI-C" function ps7_stop_sim;
    function void ps7_stop_sim();
         $display("End of simulation");
@@ -907,19 +903,6 @@ import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK1();
   begin
    ps7_set_ip_context(ip_name);
    ps7_simulate_single_cycle_FCLK_CLK0();
-  end
-
-  initial
-  begin
-     FCLK_CLK1 = 1'b0;
-  end
-
-  always #(50.0) FCLK_CLK1 <= ~FCLK_CLK1;
-
-  always@(posedge FCLK_CLK1)
-  begin
-   ps7_set_ip_context(ip_name);
-   ps7_simulate_single_cycle_FCLK_CLK1();
   end
 
 endmodule

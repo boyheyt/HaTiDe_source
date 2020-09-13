@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="E:/MiniZed/Lcd_Key_Testing/main1/main1.xpr">
+<Project Version="7" Minor="40" Path="C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="d82d984d3c6244fe91c117d5ae2c2526"/>
@@ -141,6 +141,7 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/new/LCD.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

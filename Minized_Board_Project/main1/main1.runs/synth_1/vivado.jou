@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Sep  8 01:00:01 2020
-# Process ID: 4256
-# Current directory: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1
+# Start of session at: Sun Sep 13 18:06:33 2020
+# Process ID: 14160
+# Current directory: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/design_1_wrapper.vds
-# Journal file: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1\vivado.jou
+# Log file: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

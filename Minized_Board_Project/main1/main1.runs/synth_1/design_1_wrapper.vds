@@ -2,12 +2,12 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Sep  8 01:00:01 2020
-# Process ID: 4256
-# Current directory: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1
+# Start of session at: Sun Sep 13 18:06:33 2020
+# Process ID: 14160
+# Current directory: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/design_1_wrapper.vds
-# Journal file: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1\vivado.jou
+# Log file: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -22,41 +22,41 @@ INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(0.004000000
 WARNING: [IP_Flow 19-3153] Bus Interface 'clock_100': ASSOCIATED_BUSIF bus parameter is missing.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 449.512 ; gain = 49.391
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 448.516 ; gain = 48.234
 Command: synth_design -top design_1_wrapper -part xc7z007sclg225-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Device 21-403] Loading part xc7z007sclg225-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8552 
+INFO: Helper process launched with PID 14148 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 891.762 ; gain = 194.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 892.387 ; gain = 194.883
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_KeyPadInterpreter_0_upgraded_ipi_1' [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_KeyPadInterpreter_0_upgraded_ipi_1/synth/design_1_KeyPadInterpreter_0_upgraded_ipi_1.v:58]
-INFO: [Synth 8-6157] synthesizing module 'KeyPadInterpreter' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadInterpreter.v:14]
-INFO: [Synth 8-6157] synthesizing module 'LFSR25000' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/LFSR25000.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'LFSR25000' (1#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/LFSR25000.v:14]
-INFO: [Synth 8-6157] synthesizing module 'KeyPadScanner' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadScanner.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_KeyPadInterpreter_0_upgraded_ipi_1' [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_KeyPadInterpreter_0_upgraded_ipi_1/synth/design_1_KeyPadInterpreter_0_upgraded_ipi_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'KeyPadInterpreter' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadInterpreter.v:14]
+INFO: [Synth 8-6157] synthesizing module 'LFSR25000' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/LFSR25000.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'LFSR25000' (1#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/LFSR25000.v:14]
+INFO: [Synth 8-6157] synthesizing module 'KeyPadScanner' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadScanner.v:14]
 	Parameter Scan bound to: 2'b00 
 	Parameter Calculate bound to: 2'b01 
 	Parameter Analyize bound to: 2'b10 
 	Parameter WaitForRead bound to: 2'b11 
-INFO: [Synth 8-226] default block is never used [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadScanner.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'KeyPadScanner' (2#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadScanner.v:14]
-INFO: [Synth 8-6157] synthesizing module 'PulseCounter' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/PulseCounter.v:14]
-WARNING: [Synth 8-5788] Register toggle_reg in module PulseCounter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/PulseCounter.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'PulseCounter' (3#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/PulseCounter.v:14]
-INFO: [Synth 8-6157] synthesizing module 'KeyPadDecoder' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadDecoder.v:14]
-INFO: [Synth 8-226] default block is never used [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadDecoder.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'KeyPadDecoder' (4#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadDecoder.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'KeyPadInterpreter' (5#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadInterpreter.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_KeyPadInterpreter_0_upgraded_ipi_1' (6#1) [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_KeyPadInterpreter_0_upgraded_ipi_1/synth/design_1_KeyPadInterpreter_0_upgraded_ipi_1.v:58]
-WARNING: [Synth 8-7023] instance 'KeyPadInterpreter_0_upgraded_ipi' of module 'design_1_KeyPadInterpreter_0_upgraded_ipi_1' has 8 connections declared, but only 7 given [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:110]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:118]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:84]
+INFO: [Synth 8-226] default block is never used [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadScanner.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'KeyPadScanner' (2#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadScanner.v:14]
+INFO: [Synth 8-6157] synthesizing module 'PulseCounter' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/PulseCounter.v:14]
+WARNING: [Synth 8-5788] Register toggle_reg in module PulseCounter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/PulseCounter.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'PulseCounter' (3#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/PulseCounter.v:14]
+INFO: [Synth 8-6157] synthesizing module 'KeyPadDecoder' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadDecoder.v:14]
+INFO: [Synth 8-226] default block is never used [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadDecoder.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'KeyPadDecoder' (4#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadDecoder.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'KeyPadInterpreter' (5#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/KeypadScanner-master/Source/KeyPadInterpreter.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_KeyPadInterpreter_0_upgraded_ipi_1' (6#1) [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_KeyPadInterpreter_0_upgraded_ipi_1/synth/design_1_KeyPadInterpreter_0_upgraded_ipi_1.v:58]
+WARNING: [Synth 8-7023] instance 'KeyPadInterpreter_0_upgraded_ipi' of module 'design_1_KeyPadInterpreter_0_upgraded_ipi_1' has 8 connections declared, but only 7 given [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:110]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:118]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:84]
 INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1516]
 INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (14#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1516]
 INFO: [Synth 8-6157] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1479]
@@ -69,11 +69,11 @@ INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [C:/Xilinx/Vivado/2019.1/scri
 INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (29#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77789]
 INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13664]
 INFO: [Synth 8-6155] done synthesizing module 'FDRE' (34#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13664]
-WARNING: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_9_ila' has 1033 connections declared, but only 1027 given [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:3223]
-WARNING: [Synth 8-3848] Net sl_iport0 in module/entity design_1_ila_0_0 does not have driver. [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:112]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (52#1) [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:84]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+WARNING: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_9_ila' has 1033 connections declared, but only 1027 given [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:3223]
+WARNING: [Synth 8-3848] Net sl_iport0 in module/entity design_1_ila_0_0 does not have driver. [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (52#1) [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/synth/design_1_ila_0_0.v:84]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
 	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
@@ -97,7 +97,7 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 	Parameter C_INCLUDE_ACP_TRANS_CHECK bound to: 0 - type: integer 
 	Parameter C_NUM_F2P_INTR_INPUTS bound to: 1 - type: integer 
 	Parameter C_FCLK_CLK0_BUF bound to: TRUE - type: string 
-	Parameter C_FCLK_CLK1_BUF bound to: TRUE - type: string 
+	Parameter C_FCLK_CLK1_BUF bound to: FALSE - type: string 
 	Parameter C_FCLK_CLK2_BUF bound to: FALSE - type: string 
 	Parameter C_FCLK_CLK3_BUF bound to: FALSE - type: string 
 	Parameter C_EMIO_GPIO_WIDTH bound to: 64 - type: integer 
@@ -130,23 +130,22 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
 	Parameter C_GP0_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
 	Parameter C_GP1_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1347]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1347]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (53#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
 INFO: [Synth 8-6157] synthesizing module 'BIBUF' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:722]
 INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (54#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:722]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:61707]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (55#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:61707]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (56#1) [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:194]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (57#1) [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 23 connections declared, but only 22 given [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:128]
-INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_0' [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'top' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (56#1) [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:190]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (57#1) [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_0' [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:7]
 	Parameter CLK_FREQ bound to: 100000000 - type: integer 
 	Parameter Ready_4ms bound to: 400000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'lcd' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:135]
+INFO: [Synth 8-6157] synthesizing module 'lcd' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:135]
 	Parameter CLK_FREQ bound to: 100000000 - type: integer 
 	Parameter D_50ns bound to: 5 - type: integer 
 	Parameter D_250ns bound to: 25 - type: integer 
@@ -182,21 +181,61 @@ INFO: [Synth 8-6157] synthesizing module 'lcd' [E:/MiniZed/Lcd_Key_Testing/main1
 	Parameter STATE23 bound to: 5'b10111 
 	Parameter STATE24 bound to: 5'b11000 
 	Parameter STATE25 bound to: 5'b11001 
-INFO: [Synth 8-6155] done synthesizing module 'lcd' (58#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:135]
-INFO: [Synth 8-6157] synthesizing module 'rom' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:645]
-WARNING: [Synth 8-567] referenced signal 'romBuffer' should be on the sensitivity list [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:672]
-INFO: [Synth 8-6155] done synthesizing module 'rom' (59#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:645]
-INFO: [Synth 8-6157] synthesizing module 'controller' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:530]
-INFO: [Synth 8-6155] done synthesizing module 'controller' (60#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:530]
-INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'debounce' (61#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'top' (62#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_0' (63#1) [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'KeyPadInterpreter_0_upgraded_ipi'. This will prevent further optimization [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:110]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'top_0'. This will prevent further optimization [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:151]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:118]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (64#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (65#1) [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'lcd' (58#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:135]
+INFO: [Synth 8-6157] synthesizing module 'rom' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:645]
+WARNING: [Synth 8-567] referenced signal 'romBuffer' should be on the sensitivity list [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:672]
+WARNING: [Synth 8-567] referenced signal 'data_in' should be on the sensitivity list [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:672]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[1] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[2] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[3] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[4] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[5] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[6] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[7] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[8] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[9] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[10] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[11] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[12] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[13] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[14] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[15] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[16] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[17] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[18] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[19] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[20] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[21] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[22] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[23] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[24] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[25] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[26] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[27] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[28] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[29] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[30] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[31] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[32] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[33] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[34] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[35] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[36] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[37] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[38] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+WARNING: [Synth 8-6014] Unused sequential element romBuffer_reg[39] was removed.  [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:686]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (59#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:645]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:530]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (60#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:530]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (61#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'top' (62#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_0' (63#1) [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'KeyPadInterpreter_0_upgraded_ipi'. This will prevent further optimization [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:110]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'top_0'. This will prevent further optimization [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:151]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:118]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (64#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (65#1) [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-3331] design rom has unconnected port clock
 WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_COL
 WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_CRS
@@ -299,7 +338,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper__para
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper__parameterized0 has unconnected port DINB[20]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:17 ; elapsed = 00:02:31 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished RTL Elaboration : Time (s): cpu = 00:02:02 ; elapsed = 00:02:15 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -312,10 +351,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:18 ; elapsed = 00:02:32 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:03 ; elapsed = 00:02:16 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:18 ; elapsed = 00:02:32 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:03 ; elapsed = 00:02:16 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 468 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -323,53 +362,53 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
-Finished Parsing XDC File [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Parsing XDC File [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
-Finished Parsing XDC File [e:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
-Parsing XDC File [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/constrs_1/imports/new/LCD.xdc]
-WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/constrs_1/imports/new/LCD.xdc:32]
-WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/constrs_1/imports/new/LCD.xdc:35]
-Finished Parsing XDC File [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/constrs_1/imports/new/LCD.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/constrs_1/imports/new/LCD.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Parsing XDC File [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
+Finished Parsing XDC File [c:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
+Parsing XDC File [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/constrs_1/imports/new/LCD.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/constrs_1/imports/new/LCD.xdc:33]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/constrs_1/imports/new/LCD.xdc:36]
+Finished Parsing XDC File [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/constrs_1/imports/new/LCD.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/constrs_1/imports/new/LCD.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Parsing XDC File [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1346.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1351.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 344 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 296 instances
   CFGLUT5 => SRLC32E: 48 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.329 . Memory (MB): peak = 1346.129 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.313 . Memory (MB): peak = 1351.840 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:36 ; elapsed = 00:02:51 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished Constraint Validation : Time (s): cpu = 00:02:17 ; elapsed = 00:02:30 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:36 ; elapsed = 00:02:51 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:17 ; elapsed = 00:02:30 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0/inst. (constraint file  E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/dont_touch.xdc, line 22).
-Applied set_property DONT_TOUCH = true for design_1_i/ila_0/inst. (constraint file  E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/dont_touch.xdc, line 25).
+Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0/inst. (constraint file  C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/dont_touch.xdc, line 22).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_0/inst. (constraint file  C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/dont_touch.xdc, line 25).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/top_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/KeyPadInterpreter_0_upgraded_ipi. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ila_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:36 ; elapsed = 00:02:51 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:17 ; elapsed = 00:02:30 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'KeyPadScanner'
 INFO: [Synth 8-802] inferred FSM for state register 'Col_reg' in module 'KeyPadScanner'
@@ -932,7 +971,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lcd'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:46 ; elapsed = 00:03:03 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:25 ; elapsed = 00:02:39 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -970,7 +1009,7 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 210   
 	               15 Bit    Registers := 1     
 	               10 Bit    Registers := 9     
-	                9 Bit    Registers := 77    
+	                9 Bit    Registers := 38    
 	                8 Bit    Registers := 17    
 	                7 Bit    Registers := 3     
 	                6 Bit    Registers := 28    
@@ -990,7 +1029,7 @@ Detailed RTL Component Info :
 	   2 Input     15 Bit        Muxes := 46    
 	   3 Input     13 Bit        Muxes := 1     
 	   8 Input     10 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
 	  26 Input      8 Bit        Muxes := 1     
 	   3 Input      7 Bit        Muxes := 1     
 	   8 Input      7 Bit        Muxes := 1     
@@ -1009,8 +1048,8 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 7     
 	   8 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 13    
-	   2 Input      1 Bit        Muxes := 355   
-	   3 Input      1 Bit        Muxes := 47    
+	   2 Input      1 Bit        Muxes := 314   
+	   3 Input      1 Bit        Muxes := 48    
 	   9 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 5     
 	  26 Input      1 Bit        Muxes := 11    
@@ -2178,13 +2217,14 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
-	                9 Bit    Registers := 40    
+	                9 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 42    
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 Module controller 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2417,7 +2457,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/ila_0/inst/\ila_core_inst/u_ila_regs /\slaveRegDo_mux_1_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/ila_0/inst/\ila_core_inst/u_ila_regs /\slaveRegDo_mux_1_reg[15] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:24 ; elapsed = 00:03:44 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:49 ; elapsed = 00:03:04 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2429,13 +2469,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:40 ; elapsed = 00:04:00 . Memory (MB): peak = 1346.129 ; gain = 649.289
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:02 ; elapsed = 00:03:17 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:46 ; elapsed = 00:04:06 . Memory (MB): peak = 1374.594 ; gain = 677.754
+Finished Timing Optimization : Time (s): cpu = 00:03:05 ; elapsed = 00:03:20 . Memory (MB): peak = 1351.840 ; gain = 654.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2447,7 +2487,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:51 ; elapsed = 00:04:12 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished Technology Mapping : Time (s): cpu = 00:03:09 ; elapsed = 00:03:24 . Memory (MB): peak = 1355.805 ; gain = 658.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2510,9 +2550,9 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[1] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:trig_in to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:trig_out_ack to constant 0
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:683]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/imports/LV/hellolcd_original.v:683]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:55 ; elapsed = 00:04:16 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished IO Insertion : Time (s): cpu = 00:03:12 ; elapsed = 00:03:27 . Memory (MB): peak = 1359.598 ; gain = 662.094
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2525,7 +2565,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:55 ; elapsed = 00:04:16 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:12 ; elapsed = 00:03:27 . Memory (MB): peak = 1359.598 ; gain = 662.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2537,25 +2577,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:56 ; elapsed = 00:04:17 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:13 ; elapsed = 00:03:28 . Memory (MB): peak = 1359.598 ; gain = 662.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:56 ; elapsed = 00:04:17 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:13 ; elapsed = 00:03:28 . Memory (MB): peak = 1359.598 ; gain = 662.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:56 ; elapsed = 00:04:18 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:13 ; elapsed = 00:03:28 . Memory (MB): peak = 1359.598 ; gain = 662.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:56 ; elapsed = 00:04:18 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:13 ; elapsed = 00:03:28 . Memory (MB): peak = 1359.598 ; gain = 662.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2589,15 +2629,15 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BIBUF    |    86|
-|2     |BUFG     |     2|
+|2     |BUFG     |     1|
 |3     |CARRY4   |   139|
 |4     |CFGLUT5  |   344|
 |5     |LUT1     |   196|
-|6     |LUT2     |   143|
-|7     |LUT3     |   205|
-|8     |LUT4     |   514|
-|9     |LUT5     |   276|
-|10    |LUT6     |  1524|
+|6     |LUT2     |   129|
+|7     |LUT3     |   210|
+|8     |LUT4     |   495|
+|9     |LUT5     |   234|
+|10    |LUT6     |  1390|
 |11    |MUXF7    |   104|
 |12    |MUXF8    |    32|
 |13    |PS7      |     1|
@@ -2606,7 +2646,7 @@ Report Cell Usage:
 |16    |SRL16E   |    48|
 |17    |SRLC16E  |     2|
 |18    |SRLC32E  |    17|
-|19    |FDCE     |   388|
+|19    |FDCE     |    37|
 |20    |FDPE     |    34|
 |21    |FDRE     |  3314|
 |22    |FDSE     |     9|
@@ -2619,12 +2659,12 @@ Report Instance Areas:
 +------+----------------------------------------------------------------------------+------------------------------------------------------------+------+
 |      |Instance                                                                    |Module                                                      |Cells |
 +------+----------------------------------------------------------------------------+------------------------------------------------------------+------+
-|1     |top                                                                         |                                                            |  7399|
-|2     |  design_1_i                                                                |design_1                                                    |  7376|
-|3     |    KeyPadInterpreter_0_upgraded_ipi                                        |design_1_KeyPadInterpreter_0_upgraded_ipi_1                 |   149|
-|4     |      inst                                                                  |KeyPadInterpreter                                           |   145|
+|1     |top                                                                         |                                                            |  6843|
+|2     |  design_1_i                                                                |design_1                                                    |  6820|
+|3     |    KeyPadInterpreter_0_upgraded_ipi                                        |design_1_KeyPadInterpreter_0_upgraded_ipi_1                 |   148|
+|4     |      inst                                                                  |KeyPadInterpreter                                           |   144|
 |5     |        Count                                                               |PulseCounter                                                |     9|
-|6     |        Decoder                                                             |KeyPadDecoder                                               |     8|
+|6     |        Decoder                                                             |KeyPadDecoder                                               |     7|
 |7     |        LFSR                                                                |LFSR25000                                                   |    20|
 |8     |        Scanner                                                             |KeyPadScanner                                               |   108|
 |9     |    ila_0                                                                   |design_1_ila_0_0                                            |  6093|
@@ -2971,42 +3011,42 @@ Report Instance Areas:
 |350   |                    \I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE           |ltlib_v1_0_0_all_typeA_slice                                |     5|
 |351   |                    \I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE           |ltlib_v1_0_0_all_typeA_slice__parameterized0                |     6|
 |352   |          xsdb_memory_read_inst                                             |ltlib_v1_0_0_generic_memrd                                  |   116|
-|353   |    processing_system7_0                                                    |design_1_processing_system7_0_0                             |   201|
-|354   |      inst                                                                  |processing_system7_v5_5_processing_system7                  |   201|
-|355   |    top_0                                                                   |design_1_top_0_0                                            |   929|
-|356   |      inst                                                                  |top                                                         |   929|
-|357   |        controller                                                          |controller                                                  |    70|
+|353   |    processing_system7_0                                                    |design_1_processing_system7_0_0                             |   200|
+|354   |      inst                                                                  |processing_system7_v5_5_processing_system7                  |   200|
+|355   |    top_0                                                                   |design_1_top_0_0                                            |   375|
+|356   |      inst                                                                  |top                                                         |   375|
+|357   |        controller                                                          |controller                                                  |    34|
 |358   |        debounce                                                            |debounce                                                    |    31|
-|359   |        lcd                                                                 |lcd                                                         |   229|
-|360   |        rom                                                                 |rom                                                         |   536|
+|359   |        lcd                                                                 |lcd                                                         |   221|
+|360   |        rom                                                                 |rom                                                         |    26|
 +------+----------------------------------------------------------------------------+------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:56 ; elapsed = 00:04:18 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:13 ; elapsed = 00:03:28 . Memory (MB): peak = 1359.598 ; gain = 662.094
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1285 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:04:05 . Memory (MB): peak = 1375.605 ; gain = 678.766
-Synthesis Optimization Complete : Time (s): cpu = 00:03:56 ; elapsed = 00:04:18 . Memory (MB): peak = 1375.605 ; gain = 678.766
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:03:19 . Memory (MB): peak = 1359.598 ; gain = 662.094
+Synthesis Optimization Complete : Time (s): cpu = 00:03:13 ; elapsed = 00:03:29 . Memory (MB): peak = 1359.598 ; gain = 662.094
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 621 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: design_1_i/ila_0 UUID: be177176-557e-59fe-ace2-fe04795a2b22 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1393.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1371.691 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 344 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 296 instances
   CFGLUT5 => SRLC32E: 48 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-371 Infos, 155 Warnings, 0 Critical Warnings and 0 Errors encountered.
+371 Infos, 194 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:13 ; elapsed = 00:04:38 . Memory (MB): peak = 1393.746 ; gain = 944.234
+synth_design: Time (s): cpu = 00:03:23 ; elapsed = 00:03:40 . Memory (MB): peak = 1371.691 ; gain = 923.176
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1393.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1371.691 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Sep  8 01:04:56 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 13 18:10:29 2020...
