@@ -3,19 +3,19 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="E:/MiniZed/Lcd_Key_Testing/main1/main1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+      <db_ref path="C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="822001fs"></ZoomEndTime>
+      <ZoomEndTime time="1093864fs"></ZoomEndTime>
       <Cursor1Time time="586000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="311"></NameColumnWidth>
-      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+      <ValueColumnWidth column_width="122"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
    <wave_markers>

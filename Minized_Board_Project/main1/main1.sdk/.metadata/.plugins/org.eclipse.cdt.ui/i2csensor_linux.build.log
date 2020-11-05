@@ -1,0 +1,11 @@
+23:29:54 **** Incremental Build of configuration Debug for project i2csensor_linux ****
+make all 
+'Building target: i2csensor_linux.elf'
+'Invoking: ARM v7 Linux g++ linker'
+arm-linux-gnueabihf-g++  -o "i2csensor_linux.elf"  ./src/main.o   
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/8.2.0/../../../../arm-linux-gnueabihf/bin/ld.exe: cannot open output file i2csensor_linux.elf: Invalid argument
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:50: i2csensor_linux.elf] Error 1
+
+23:29:54 Build Finished (took 191ms)
+
