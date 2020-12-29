@@ -2,37 +2,39 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 790 -y 50 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 790 -y 80 -defaultsOSRD
-preplace port rs -pg 1 -lvl 3 -x 790 -y 380 -defaultsOSRD
-preplace port e -pg 1 -lvl 3 -x 790 -y 410 -defaultsOSRD
-preplace port Push_button -pg 1 -lvl 3 -x 790 -y 340 -defaultsOSRD -right
-preplace portBus d -pg 1 -lvl 3 -x 790 -y 440 -defaultsOSRD
-preplace portBus ColDataOut -pg 1 -lvl 3 -x 790 -y 300 -defaultsOSRD
-preplace portBus RowDataIn -pg 1 -lvl 0 -x -60 -y 120 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 540 -y 90 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 810 -y 50 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 810 -y 80 -defaultsOSRD
+preplace port rs -pg 1 -lvl 3 -x 810 -y 380 -defaultsOSRD
+preplace port e -pg 1 -lvl 3 -x 810 -y 410 -defaultsOSRD
+preplace port Push_button -pg 1 -lvl 3 -x 810 -y 340 -defaultsOSRD -right
+preplace portBus d -pg 1 -lvl 3 -x 810 -y 440 -defaultsOSRD
+preplace portBus ColDataOut -pg 1 -lvl 3 -x 810 -y 300 -defaultsOSRD
+preplace portBus RowDataIn -pg 1 -lvl 0 -x -80 -y 120 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 570 -y 90 -defaultsOSRD
 preplace inst ila_0 -pg 1 -lvl 1 -x 180 -y 500 -defaultsOSRD
 preplace inst KeyPadInterpreter_0_upgraded_ipi -pg 1 -lvl 1 -x 180 -y 290 -defaultsOSRD
-preplace inst top_0 -pg 1 -lvl 2 -x 540 -y 430 -defaultsOSRD
-preplace inst OpcodeDecoder_0 -pg 1 -lvl 2 -x 540 -y 220 -defaultsOSRD
+preplace inst top_0 -pg 1 -lvl 2 -x 570 -y 430 -defaultsOSRD
+preplace inst OpcodeDecoder_0 -pg 1 -lvl 2 -x 570 -y 220 -defaultsOSRD
 preplace inst alu_0 -pg 1 -lvl 1 -x 180 -y 80 -defaultsOSRD
-preplace netloc top_0_rs 1 2 1 750J 370n
-preplace netloc top_0_e 1 2 1 750J 390n
-preplace netloc top_0_d 1 0 3 0 660 N 660 740J
-preplace netloc Push_button_1 1 0 3 20 190 340 310 750J
-preplace netloc KeyPadInterpreter_0_upgraded_ipi_KeyReady 1 0 2 0 180 330
-preplace netloc KeyPadInterpreter_0_upgraded_ipi_DataOut 1 0 2 -20 170 360
+preplace inst Bin2BCD_0 -pg 1 -lvl 2 -x 570 -y -70 -defaultsOSRD
+preplace inst BCD2ASIIConverter_0 -pg 1 -lvl 1 -x 180 -y -90 -defaultsOSRD
+preplace netloc top_0_rs 1 2 1 780J 370n
+preplace netloc top_0_e 1 2 1 780J 390n
+preplace netloc top_0_d 1 0 3 30 190 340 570 770J
+preplace netloc Push_button_1 1 0 3 -20 -30 390 310 780J
+preplace netloc KeyPadInterpreter_0_upgraded_ipi_KeyReady 1 0 2 20 170 360
+preplace netloc KeyPadInterpreter_0_upgraded_ipi_DataOut 1 0 2 0 160 370
 preplace netloc KeyPadInterpreter_0_upgraded_ipi_ColDataOut 1 1 2 NJ 300 NJ
-preplace netloc RowDataIn_1 1 0 1 -40 120n
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -10 160 370 10 710
-preplace netloc top_0_debug_address 1 0 3 10 640 N 640 720
-preplace netloc top_0_done_out 1 0 3 10 200 350J 290 710
-preplace netloc top_0_debug_addr_rom_in 1 0 3 -30 0 NJ 0 730
-preplace netloc top_0_debug_data_rom_out 1 0 3 20 650 NJ 650 710
-preplace netloc processing_system7_0_DDR 1 2 1 750J 50n
-preplace netloc processing_system7_0_FIXED_IO 1 2 1 750J 80n
-levelinfo -pg 1 -60 180 540 790
-pagesize -pg 1 -db -bbox -sgen -210 -60 940 1400
+preplace netloc RowDataIn_1 1 0 1 -60 120n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -10 -20 380 290 740
+preplace netloc top_0_debug_address 1 0 3 10 200 330 560 750
+preplace netloc top_0_done_out 1 0 3 -40 0 330J 10 750
+preplace netloc top_0_debug_addr_rom_in 1 0 3 -30 180 350J 550 740
+preplace netloc top_0_debug_data_rom_out 1 0 3 -50 -10 400J 0 760
+preplace netloc processing_system7_0_DDR 1 2 1 780J 50n
+preplace netloc processing_system7_0_FIXED_IO 1 2 1 780J 80n
+levelinfo -pg 1 -80 180 570 810
+pagesize -pg 1 -db -bbox -sgen -230 -150 960 1400
 "
 }
 {

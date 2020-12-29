@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sun Sep 13 18:06:24 2020
+//Date        : Tue Dec 29 22:47:48 2020
 //Host        : DESKTOP-O25IKCM running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (ColDataOut,
     DDR_addr,
@@ -107,6 +107,11 @@ module design_1
   assign d[7:0] = top_0_d;
   assign e = top_0_e;
   assign rs = top_0_rs;
+  design_1_BCD2ASIIConverter_0_0 BCD2ASIIConverter_0
+       (.InputBcd({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+  design_1_Bin2BCD_0_0 Bin2BCD_0
+       (.bin({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .en(1'b0));
   design_1_KeyPadInterpreter_0_upgraded_ipi_1 KeyPadInterpreter_0_upgraded_ipi
        (.Clock(processing_system7_0_FCLK_CLK0),
         .ColDataOut(KeyPadInterpreter_0_upgraded_ipi_ColDataOut),
@@ -115,6 +120,13 @@ module design_1
         .KeyReady(KeyPadInterpreter_0_upgraded_ipi_KeyReady),
         .ResetButton(Push_button_1),
         .RowDataIn(RowDataIn_1));
+  design_1_OpcodeDecoder_0_0 OpcodeDecoder_0
+       (.data_in({1'b0,1'b0,1'b0,1'b0}),
+        .op_out({1'b0,1'b0}));
+  design_1_alu_0_0 alu_0
+       (.A({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .ALU_Sel({1'b0,1'b0}),
+        .B({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   design_1_ila_0_0 ila_0
        (.clk(processing_system7_0_FCLK_CLK0),
         .probe0(KeyPadInterpreter_0_upgraded_ipi_KeyReady),

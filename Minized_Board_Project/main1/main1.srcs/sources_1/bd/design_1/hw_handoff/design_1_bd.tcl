@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# KeyPadInterpreter, top
+# BCD2ASIIConverter, Bin2BCD, KeyPadInterpreter, OpcodeDecoder, alu, top
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -180,6 +180,28 @@ proc create_root_design { parentCell } {
   set e [ create_bd_port -dir O e ]
   set rs [ create_bd_port -dir O rs ]
 
+  # Create instance: BCD2ASIIConverter_0, and set properties
+  set block_name BCD2ASIIConverter
+  set block_cell_name BCD2ASIIConverter_0
+  if { [catch {set BCD2ASIIConverter_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $BCD2ASIIConverter_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: Bin2BCD_0, and set properties
+  set block_name Bin2BCD
+  set block_cell_name Bin2BCD_0
+  if { [catch {set Bin2BCD_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Bin2BCD_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: KeyPadInterpreter_0_upgraded_ipi, and set properties
   set block_name KeyPadInterpreter
   set block_cell_name KeyPadInterpreter_0_upgraded_ipi
@@ -187,6 +209,28 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $KeyPadInterpreter_0_upgraded_ipi eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: OpcodeDecoder_0, and set properties
+  set block_name OpcodeDecoder
+  set block_cell_name OpcodeDecoder_0
+  if { [catch {set OpcodeDecoder_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $OpcodeDecoder_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: alu_0, and set properties
+  set block_name alu
+  set block_cell_name alu_0
+  if { [catch {set alu_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $alu_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
