@@ -1,0 +1,316 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Sep  4 20:24:33 2020
+# Process ID: 11812
+# Current directory: E:/MiniZed/Lcd_Key_Testing/main1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7612 E:\MiniZed\Lcd_Key_Testing\main1\main1.xpr
+# Log file: E:/MiniZed/Lcd_Key_Testing/main1/vivado.log
+# Journal file: E:/MiniZed/Lcd_Key_Testing/main1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/MiniZed/Lcd_Key_Testing/main1/main1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/NTX/main1' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] impl_1 strategy "Vivado Implementation Defaults," step write_bitstream, attribute : Could not find the file 'E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl', nor could it be found using path 'C:/Users/NTX/Desktop/LV/init.tcl'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Runs 36-536] Adding Tcl hook script file E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl to utils_1 fileset.
+INFO: [Runs 36-535] Tcl hook script file E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl does not exist.
+INFO: [Project 1-230] Project 'main1.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 755.773 ; gain = 115.059
+update_module_reference {design_1_KeyPadInterpreter_0_upgraded_ipi_0 design_2_KeyPadInterpreter_0_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'Clock': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:module_ref:top:1.0 - top_0
+Adding component instance block -- xilinx.com:module_ref:KeyPadInterpreter:1.0 - KeyPadInterpreter_0_upgraded_ipi
+INFO: [BD 41-1728] Could not find a module with name: design_1_KeyPadInterpreter_0_0 
+WARNING: [BD 41-1753] The name 'KeyPadInterpreter_0_upgraded_ipi' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+ERROR: [BD 41-249] Net 'ColDataOut_1' already has a source port '/ColDataOut' connected to it; Another source port cannot be connected to this net.
+Successfully read diagram <design_1> from BD file <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd'
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:module_ref:top:1.0 - top_0
+Adding component instance block -- xilinx.com:module_ref:KeyPadInterpreter:1.0 - KeyPadInterpreter_0
+Successfully read diagram <design_2> from BD file <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/design_2.bd>
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/design_2.bd'
+INFO: [IP_Flow 19-3420] Updated design_2_KeyPadInterpreter_0_0 to use current project options
+WARNING: [IP_Flow 19-4704] Upgraded port 'ColDataOut' out differs from original direction in
+WARNING: [IP_Flow 19-4704] Upgraded port 'RowDataIn' in differs from original direction out
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_2_KeyPadInterpreter_0_0'. These changes may impact your design.
+ERROR: [BD 41-249] Net 'ColDataOut_1' already has a source port '/ColDataOut' connected to it; Another source port cannot be connected to this net.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_2_KeyPadInterpreter_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_2\design_2.bd> 
+INFO: [BD 41-2124] The block design file <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/design_2.bd> has changed from an XML format to a JSON format. All flows are expected to work as in prior versions of Vivado. Please contact your Xilinx Support representative, in case of any issues.
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/ui/bd_1fdbff51.ui> 
+upgrade_ip: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 868.184 ; gain = 112.410
+ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.
+update_module_reference: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 868.184 ; gain = 112.410
+ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_nets KeyPadInterpreter_0_PressCount] [get_bd_cells KeyPadInterpreter_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_EN_RST0_PORT {0} CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {0} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {0}] [get_bd_cells processing_system7_0]
+endgroup
+delete_bd_objs [get_bd_nets ColDataOut_1] [get_bd_ports ColDataOut]
+delete_bd_objs [get_bd_ports Count]
+delete_bd_objs [get_bd_nets KeyPadInterpreter_0_RowDataIn] [get_bd_ports RowDataIn]
+create_bd_port -dir I -from 3 -to 0 RowIn
+set_property location {532 102} [get_bd_ports Button]
+undo
+INFO: [Common 17-17] undo 'set_property location {532 102} [get_bd_ports Button]'
+connect_bd_net [get_bd_ports RowIn] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/RowDataIn]
+create_bd_port -dir O ColData_Out
+set_property RIGHT 3 [get_bd_ports /ColData_Out]
+WARNING: [BD 41-1642] Cannot set the parameter 'RIGHT' on '/ColData_Out' - Parameter does not exist. 
+set_property RIGHT 3 [get_bd_ports /ColData_Out]
+WARNING: [BD 41-1642] Cannot set the parameter 'RIGHT' on '/ColData_Out' - Parameter does not exist. 
+set_property LEFT 3 [get_bd_ports /ColData_Out]
+WARNING: [BD 41-1642] Cannot set the parameter 'LEFT' on '/ColData_Out' - Parameter does not exist. 
+delete_bd_objs [get_bd_ports ColData_Out]
+create_bd_port -dir O -from 3 -to 0 ColData_Out
+connect_bd_net [get_bd_ports ColData_Out] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/PressCount]
+export_ip_user_files -of_objects  [get_files E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/design_2.bd] -no_script -reset -force -quiet
+remove_files  E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/design_2.bd
+remove_files: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1115.512 ; gain = 18.770
+file delete -force E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2
+update_module_reference design_1_top_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clock_100' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'clock_100': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_top_0_0 to use current project options
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_upgraded_ipi_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [BD 41-2124] The block design file <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd> has changed from an XML format to a JSON format. All flows are expected to work as in prior versions of Vivado. Please contact your Xilinx Support representative, in case of any issues.
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference design_1_top_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clock_100' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'clock_100': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_top_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'done'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'done_out'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_top_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'done' is not found on the upgraded version of the cell '/top_0'. Its connection to the net 'top_0_done' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_top_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <top_0_done> has no source
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_upgraded_ipi_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property location {861 292} [get_bd_ports Push_button]
+delete_bd_objs [get_bd_nets ColDataOut_1] [get_bd_ports ColDataOut]
+create_bd_port -dir O Col_Out
+delete_bd_objs [get_bd_ports Col_Out]
+create_bd_port -dir O -from 3 -to 0 Col_out
+connect_bd_net [get_bd_ports Col_out] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/ColDataOut]
+save_bd_design
+WARNING: [BD 41-597] NET <top_0_done> has no source
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_upgraded_ipi_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference design_1_top_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clock_100' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'clock_100': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_top_0_0 to use current project options
+WARNING: [BD 41-597] NET <top_0_done> has no source
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_upgraded_ipi_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+update_module_reference design_1_top_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clock_100' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(0.0050000000000000001 * spirit:decode(id('MODELPARAM_VALUE.CLK_FREQ')))" into user parameter "Ready_5ms".
+WARNING: [IP_Flow 19-3153] Bus Interface 'clock_100': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_top_0_0 to use current project options
+WARNING: [BD 41-597] NET <top_0_done> has no source
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_upgraded_ipi_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+regenerate_bd_layout
+save_bd_design
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_EN_RST0_PORT {0}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+WARNING: [BD 41-597] NET <top_0_done> has no source
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_upgraded_ipi_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property name ColDataOut [get_bd_ports Col_out]
+save_bd_design
+WARNING: [BD 41-597] NET <top_0_done> has no source
+WARNING: [BD 41-597] NET <KeyPadInterpreter_0_upgraded_ipi_RowDataIn> has no source
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+delete_bd_objs [get_bd_nets KeyPadInterpreter_0_upgraded_ipi_RowDataIn] [get_bd_ports RowDataIn]
+create_bd_port -dir I -from 3 -to 0 RowDataIn
+connect_bd_net [get_bd_ports RowDataIn] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/RowDataIn]
+connect_bd_net [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/KeyRead] [get_bd_pins top_0/done_out]
+save_bd_design
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /KeyPadInterpreter_0_upgraded_ipi/Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /top_0/clock_100 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+save_bd_design
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block top_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block KeyPadInterpreter_0_upgraded_ipi .
+Exporting to file E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+WARNING: [Runs 36-526] Unable to set the pre hook file ' E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl ' for run step Write Bitstream, as path is invalid. 
+WARNING: [Runs 36-526] Unable to set the pre hook file ' E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl ' for run step Write Bitstream, as path is invalid. 
+CRITICAL WARNING: [Project 1-975] Hook script file E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl used in Write Bitstream does not exist.
+update_files -from_files E:/MiniZed/Lcd_Key_Testing/main1/init.tcl -to_files E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl' with file 'E:/MiniZed/Lcd_Key_Testing/main1/init.tcl'.
+WARNING: [Project 1-965] File E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl has been removed from project, but is still used as a hook script in run(s) impl_1.
+ Please use the command(s) "reset_property STEPS.WRITE_BITSTREAM.TCL.PRE [get_runs impl_1]" to remove it as a hook script.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Sep  4 21:02:56 2020] Launched synth_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/runme.log
+[Fri Sep  4 21:02:56 2020] Launched impl_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.317 . Memory (MB): peak = 2058.797 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.318 . Memory (MB): peak = 2058.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2058.797 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2178.242 ; gain = 874.152
+file copy -force E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/design_1_wrapper.sysdef E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk -hwspec E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk -hwspec E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_KeyPadInterpreter_0_upgraded_ipi_1
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'Clock': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_KeyPadInterpreter_0_upgraded_ipi_1 to use current project options
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /top_0/clock_100 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /KeyPadInterpreter_0_upgraded_ipi/Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+save_bd_design
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block top_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block KeyPadInterpreter_0_upgraded_ipi .
+Exporting to file E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Fri Sep  4 21:23:10 2020] Launched synth_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/runme.log
+[Fri Sep  4 21:23:10 2020] Launched impl_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2296.230 ; gain = 40.363
+update_module_reference design_1_KeyPadInterpreter_0_upgraded_ipi_1
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'Clock': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_KeyPadInterpreter_0_upgraded_ipi_1 to use current project options
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [BD 41-927] Following properties on pin /top_0/clock_100 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /KeyPadInterpreter_0_upgraded_ipi/Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <E:\MiniZed\Lcd_Key_Testing\main1\main1.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block top_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block KeyPadInterpreter_0_upgraded_ipi .
+Exporting to file E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Fri Sep  4 21:25:21 2020] Launched synth_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/runme.log
+[Fri Sep  4 21:25:21 2020] Launched impl_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2459.016 ; gain = 36.109
+open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Sep  4 21:28:14 2020] Launched synth_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/runme.log
+[Fri Sep  4 21:28:14 2020] Launched impl_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/runme.log
+file copy -force E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/design_1_wrapper.sysdef E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Sep  4 21:54:06 2020] Launched synth_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/synth_1/runme.log
+[Fri Sep  4 21:54:06 2020] Launched impl_1...
+Run output will be captured here: E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/runme.log
+file copy -force E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/design_1_wrapper.sysdef E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  4 22:00:23 2020...

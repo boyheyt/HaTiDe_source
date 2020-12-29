@@ -2,97 +2,19 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Sep  4 20:24:33 2020
-# Process ID: 11812
-# Current directory: E:/MiniZed/Lcd_Key_Testing/main1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7612 E:\MiniZed\Lcd_Key_Testing\main1\main1.xpr
-# Log file: E:/MiniZed/Lcd_Key_Testing/main1/vivado.log
-# Journal file: E:/MiniZed/Lcd_Key_Testing/main1\vivado.jou
+# Start of session at: Fri Nov 27 20:47:06 2020
+# Process ID: 2808
+# Current directory: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11856 C:\HaTiDeGit\HaTiDe_source\Minized_Board_Project\main1\main1.xpr
+# Log file: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/vivado.log
+# Journal file: C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project E:/MiniZed/Lcd_Key_Testing/main1/main1.xpr
-update_module_reference {design_1_KeyPadInterpreter_0_upgraded_ipi_0 design_2_KeyPadInterpreter_0_0}
+open_project C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.xpr
 update_compile_order -fileset sources_1
-delete_bd_objs [get_bd_nets KeyPadInterpreter_0_PressCount] [get_bd_cells KeyPadInterpreter_0]
+open_bd_design {C:/HaTiDeGit/HaTiDe_source/Minized_Board_Project/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
 startgroup
-set_property -dict [list CONFIG.PCW_EN_RST0_PORT {0} CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {0} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {0}] [get_bd_cells processing_system7_0]
+create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_0
 endgroup
-delete_bd_objs [get_bd_nets ColDataOut_1] [get_bd_ports ColDataOut]
-delete_bd_objs [get_bd_ports Count]
-delete_bd_objs [get_bd_nets KeyPadInterpreter_0_RowDataIn] [get_bd_ports RowDataIn]
-create_bd_port -dir I -from 3 -to 0 RowIn
-set_property location {532 102} [get_bd_ports Button]
-undo
-connect_bd_net [get_bd_ports RowIn] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/RowDataIn]
-create_bd_port -dir O ColData_Out
-set_property RIGHT 3 [get_bd_ports /ColData_Out]
-set_property RIGHT 3 [get_bd_ports /ColData_Out]
-set_property LEFT 3 [get_bd_ports /ColData_Out]
-delete_bd_objs [get_bd_ports ColData_Out]
-create_bd_port -dir O -from 3 -to 0 ColData_Out
-connect_bd_net [get_bd_ports ColData_Out] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/PressCount]
-export_ip_user_files -of_objects  [get_files E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/design_2.bd] -no_script -reset -force -quiet
-remove_files  E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2/design_2.bd
-file delete -force E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_2
-update_module_reference design_1_top_0_0
-update_module_reference design_1_top_0_0
-set_property location {861 292} [get_bd_ports Push_button]
-delete_bd_objs [get_bd_nets ColDataOut_1] [get_bd_ports ColDataOut]
-create_bd_port -dir O Col_Out
-delete_bd_objs [get_bd_ports Col_Out]
-create_bd_port -dir O -from 3 -to 0 Col_out
-connect_bd_net [get_bd_ports Col_out] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/ColDataOut]
-save_bd_design
-update_module_reference design_1_top_0_0
-update_module_reference design_1_top_0_0
-regenerate_bd_layout
-save_bd_design
-startgroup
-set_property -dict [list CONFIG.PCW_EN_RST0_PORT {0}] [get_bd_cells processing_system7_0]
-endgroup
-save_bd_design
-set_property name ColDataOut [get_bd_ports Col_out]
-save_bd_design
-delete_bd_objs [get_bd_nets KeyPadInterpreter_0_upgraded_ipi_RowDataIn] [get_bd_ports RowDataIn]
-create_bd_port -dir I -from 3 -to 0 RowDataIn
-connect_bd_net [get_bd_ports RowDataIn] [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/RowDataIn]
-connect_bd_net [get_bd_pins KeyPadInterpreter_0_upgraded_ipi/KeyRead] [get_bd_pins top_0/done_out]
-save_bd_design
-validate_bd_design
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-update_files -from_files E:/MiniZed/Lcd_Key_Testing/main1/init.tcl -to_files E:/MiniZed/Lcd_Key_Testing/Desktop/LV/init.tcl -filesets [get_filesets *]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_run impl_1
-file copy -force E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/design_1_wrapper.sysdef E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
-
-launch_sdk -workspace E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk -hwspec E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
-open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
-open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
-update_module_reference design_1_KeyPadInterpreter_0_upgraded_ipi_1
-open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
-validate_bd_design
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference design_1_KeyPadInterpreter_0_upgraded_ipi_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
-open_bd_design {E:/MiniZed/Lcd_Key_Testing/main1/main1.srcs/sources_1/bd/design_1/design_1.bd}
-reset_run impl_1 -prev_step 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-file copy -force E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/design_1_wrapper.sysdef E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
-
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-file copy -force E:/MiniZed/Lcd_Key_Testing/main1/main1.runs/impl_1/design_1_wrapper.sysdef E:/MiniZed/Lcd_Key_Testing/main1/main1.sdk/design_1_wrapper.hdf
-
+set_property screensize {291 148} [get_bd_cells floating_point_0]
+delete_bd_objs [get_bd_cells floating_point_0]
