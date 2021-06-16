@@ -15,16 +15,16 @@ X2X::X2X(sc_module_name mName):sc_module(mName)
     // Process registration
     SC_HAS_PROCESS(X2X);
     // assigne masterID
-   // for (unsigned int index_dec = 0; index_dec < PRAM_MASTER_NUM; index_dec++) {
-   //     for (unsigned int index_add = 0; index_add < PRAM_SLAVE_NUM; index_add++){
-   //         //x2x_decoder[index_dec].start_Address = PRAM_StartAddress[index_add];
-   //         //x2x_decoder[index_dec].end_Address = PRAM_EndAddress[index_add];
-   //     }
-   // }   
-   // for (unsigned int index = 0; index < PRAM_MASTER_NUM; index++){
-   //     x2x_decoder[index].masterID = index;
-   // }
-   // // connections
+    for (unsigned int index_dec = 0; index_dec < PRAM_MASTER_NUM; index_dec++) {
+        for (unsigned int index_add = 0; index_add < PRAM_SLAVE_NUM; index_add++){
+            x2x_decoder[index_dec].start_Address = PRAM_StartAddress[index_add];
+            x2x_decoder[index_dec].end_Address = PRAM_EndAddress[index_add];
+        }
+    }   
+    for (unsigned int index = 0; index < PRAM_MASTER_NUM; index++){
+        x2x_decoder[index].masterID = index;
+    }
+    // connections
     for (unsigned int index = 0; index < PRAM_MASTER_NUM; index++) {
         ACLK(x2x_buffer[index].ACLK);
         //ACLK(x2x_arbier[index].ACLK);
