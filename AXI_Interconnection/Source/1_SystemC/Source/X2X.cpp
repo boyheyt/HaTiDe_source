@@ -9,8 +9,8 @@
   */
 X2X::X2X(sc_module_name mName):sc_module(mName)
     ,x2x_buffer{"x2x_buffer"}
-    //,x2x_decoder{"x2x_decoder"}
-    //,x2x_arbier{"x2x_arbier"}
+    ,x2x_decoder{"x2x_decoder"}
+    ,x2x_arbier{"x2x_arbier"}
 {
     // Process registration
     SC_HAS_PROCESS(X2X);
@@ -27,9 +27,9 @@ X2X::X2X(sc_module_name mName):sc_module(mName)
     // connections
     for (unsigned int index = 0; index < PRAM_MASTER_NUM; index++) {
         ACLK(x2x_buffer[index].ACLK);
-        //ACLK(x2x_arbier[index].ACLK);
+        ACLK(x2x_arbier[index].ACLK);
         ARESETN(x2x_buffer[index].ARESETN);
-        //ARESETN(x2x_arbier[index].ARESETN);
+        ARESETN(x2x_arbier[index].ARESETN);
     }
 
    // ***********************x2x_buffer to input port***********************
